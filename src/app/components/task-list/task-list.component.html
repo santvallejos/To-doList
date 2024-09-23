@@ -1,5 +1,6 @@
-<ul>
-    <app-task></app-task>   
-    <app-task></app-task>
+<div *ngIf="tasks.length === 0">No tasks available</div>
+<ul *ngIf="tasks.length < 0">
+    <li *ngFor="let task of tasks">
+        <app-task></app-task>
+    </li>
 </ul>
-

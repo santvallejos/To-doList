@@ -1,9 +1,11 @@
+//definicion de estrucutra para cada objeto de tipo tarea
 export interface Task{
     id: number;
-    name: string;
+    title: string;
     state: boolean;
 }
 
-export class TaskModel implements Task{
-    constructor(public id: number, public name: string, public state: boolean){}
+//Implmenta la interfas Task para que se pueda intanciar tareas
+export class TaskClass implements Task{
+    constructor(public id: number, public title: string, public state: boolean = false){}
 }
