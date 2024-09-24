@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { TaskClass } from '../../models/task.model';
+import { FormsModule, NgModel } from '@angular/forms'; /* Necesario para recibir elementos de un formulario y el html pueda ocupar el ngModule */
 
 @Component({
   selector: 'app-add-task',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.css'
 })

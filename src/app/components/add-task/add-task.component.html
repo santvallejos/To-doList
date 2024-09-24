@@ -1,7 +1,8 @@
 <div class="inputTask">
-  <input required="" type="text" class="inputT">
+          <!-- ngModel permite que lo que se ingrese en el input lo pueda recibir la clase -->
+  <input [(ngModel)]="taskTitle" required="" type="text" class="inputT">
   <span class="highlight"></span>
   <span class="bar"></span>
   <label>Task</label>
-  <button (click)="onAddTask()"></button>
+  <button (click)="onAddTask()">add</button><!-- Al hacer clikc se produce el evento de agregar una nueva tarea -->
 </div>

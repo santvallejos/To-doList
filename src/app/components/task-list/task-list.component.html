@@ -1,6 +1,8 @@
-<div *ngIf="tasks.length === 0">No tasks available</div>
-<ul *ngIf="tasks.length < 0">
+<div *ngIf="tasks.length === 0">No tasks available</div> <!-- si no hay ninguna tarea -->
+
+<ul *ngIf="tasks.length > 0"> <!-- Si hay tareas -->
     <li *ngFor="let task of tasks">
-        <app-task></app-task>
+        <!-- si app-task no recibe las siguientes propertys no podra mostrar o realizar las funciones -->
+        <app-task [task]="task" (complete)="onTaskComplete($event)" (delete)="onTaskDelete($event)"></app-task>
     </li>
 </ul>

@@ -15,10 +15,12 @@ export class TaskListComponent {
   @Output() complete = new EventEmitter<number>(); //Evento que indica que una tarea esta complete
   @Output() delete = new EventEmitter<number>(); //Evento que indica que una tarea se eliminara
 
+  //El id se marca como tarea completa
   onTaskComplete(id: number) {
     this.complete.emit(id);
   }
 
+  //El id se elimina, es decir la tarea
   onTaskDelete(id: number) {
     this.delete.emit(id);
   }

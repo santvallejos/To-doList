@@ -1,8 +1,9 @@
 <div class="containerButtons">
-    <label for="">{{ task.title}}</label>
-    <button (click)="onComplete()" [disabled]="task.state">Complete</button>
+    <span>{{ task.title }}</span>
+                                <!-- Cuando la tarea ya esta completa no se puede volver a clikear -->
+    <button (click)="onComplete()" [disabled]="task.state">Complete</button> <!-- Al hacer click se realiza la actividad -->
 
-    <button class="buttonDelete" (click)="onDelete()">
+    <button class="buttonDelete" (click)="onDelete()"> <!-- Al hacer click se realiza la actividad -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 69 14" class="svgIconDelete bin-topDelete">
             <g clip-path="url(#clip0_35_24)">
                 <path fill="black"
