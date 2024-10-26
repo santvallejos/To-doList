@@ -13,7 +13,7 @@ import { TaskClass } from './models/task.model';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ProjectBootcamp';
+  title = 'To-Do List';
 
   tasks: TaskClass[] = []; //Tareas
 
@@ -22,14 +22,16 @@ export class AppComponent {
   }
 
   completeTask(taskId: number){
-    const task = this.tasks.find(t => t.id === taskId);
+    const task = this.tasks.find(t => t.id === taskId);//Busca el id de la tarea
 
+    //Si se encuentra la tarea
     if(task){
-      task.state = true;
+      task.state = !task.state; //cambia al valor opuesto
     }
   }
 
   deleteTask(taskId: number){
+    //Mantendrá solo aquellas tareas cuyo id es diferente a taskId
     this.tasks = this.tasks.filter(t => t.id !== taskId);
   }
 }

@@ -1,9 +1,84 @@
-
-.completed {
-  text-decoration: line-through;
+.containerTask {
+  display: flex;
+  justify-content: space-between; /* Distribuye espacio entre los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
-/* From Uiverse.io by vinodjangid07 */
+.containerButtons {
+  display: flex;
+  gap: 10px; /* Separación entre los botones */
+}
+
+/* Complete Button */
+.complete:hover .check {
+  stroke-dashoffset: 0;
+}
+
+.complete {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.complete .background {
+  fill: #ccc;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.complete .stroke {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.complete .check {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-dashoffset: 22;
+  stroke-dasharray: 22;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.complete input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+  -appearance: none;
+  -webkit-appearance: none;
+}
+
+.complete input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+.complete input[type=checkbox]:checked + svg .background {
+  fill: #6cbe45;
+}
+
+.complete input[type=checkbox]:checked + svg .stroke {
+  stroke-dashoffset: 0;
+}
+
+.complete input[type=checkbox]:checked + svg .check {
+  stroke-dashoffset: 0;
+}
+
+          /* Delete Button  */
 .buttonDelete {
   width: 25px;
   height: 25px;

@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskListComponent {
   @Input() tasks: Task[] = []; //Recibe una lista de tareas desde el componente padre
-  @Output() complete = new EventEmitter<number>(); //Evento que indica que una tarea esta complete
-  @Output() delete = new EventEmitter<number>(); //Evento que indica que una tarea se eliminara
+  @Output() complete = new EventEmitter<number>(); //Emite al componente padre un entero
+  @Output() delete = new EventEmitter<number>(); 
 
   //El id se marca como tarea completa
   onTaskComplete(id: number) {

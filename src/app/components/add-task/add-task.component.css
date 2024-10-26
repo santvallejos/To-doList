@@ -1,13 +1,14 @@
 /* From Uiverse.io by G4b413l */
 .inputTask {
   position: relative;
+  display: flex;
+  gap: 1rem;
 }
 
 .inputT {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
@@ -40,7 +41,6 @@ label {
 .bar {
   position: relative;
   display: block;
-  width: 200px;
 }
 
 .bar:before,
@@ -92,4 +92,23 @@ label {
     width: 0;
     background: transparent;
   }
+}
+
+/* button add */
+/* From Uiverse.io by Mhyar-nsi */ 
+.buttonAdd {
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+
+.buttonAdd:hover {
+  background-color: #5264ae;
+  box-shadow: 0 0 0 5px #5264ae5f;
+  color: #fff;
 }

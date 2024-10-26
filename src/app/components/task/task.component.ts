@@ -9,17 +9,17 @@ import { Task } from '../../models/task.model';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
-  @Input() task!: Task; //Recibe la tarea
-  @Output() complete = new EventEmitter<number>();
+  @Input() task!: Task; 
+  @Output() complete = new EventEmitter<number>();//Emite al componente padre un entero
   @Output() delete = new EventEmitter<number>();
 
   onComplete()
   {
-    this.complete.emit(this.task.id);//Marca como completado la tarea es decir que el estado pasa a ser true
+    this.complete.emit(this.task.id);//Emite el id de la tarea
   }
 
   onDelete()
   {
-    this.delete.emit(this.task.id);//Elimina la tarea
+    this.delete.emit(this.task.id);
   }
 }
